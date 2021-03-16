@@ -1,0 +1,32 @@
+pipeline{
+    agent any
+    
+    stages{
+        stage('Building') {
+            steps{
+                echo 'The code will build'
+            }
+        }
+         stage('Artifact Archiving') {
+            steps{
+                echo 'The artifact will be uploaded to an artiact repo'
+            }
+            
+        }
+         stage('Testing') {
+            steps{
+                echo 'The code will Testing'
+            }
+        }
+         stage('Staging') {
+            steps{
+                echo 'The code will Staging in stage server'
+            }
+        }
+         stage('Deploying') {
+            steps{
+                echo 'The code will Deploying'
+            }
+        }
+    }
+}
